@@ -1,0 +1,12 @@
+﻿@model List<GroceryList.Models.GroceryItem>
+
+<h1>Grocery List</h1>
+<hr />
+
+<ul>
+@foreach(var item in Model) {
+    <li>(@item.Category) @item.Name - @item.Quantity</li>
+}
+</ul>
+
+<a class="btn btn-primary" asp-controller="Grocery" asp-action="Add">Add Item</a>
